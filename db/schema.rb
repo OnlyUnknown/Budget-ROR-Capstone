@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_14_161211) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_14_192623) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "catogorization", force: :cascade do |t|
-    t.bigint "group_id"
-    t.bigint "entity_id"
-    t.index ["entity_id"], name: "index_catogorization_on_entity_id"
-    t.index ["group_id"], name: "index_catogorization_on_group_id"
+  create_table "categorizations", force: :cascade do |t|
+    t.bigint "entity_id", null: false
+    t.bigint "group_id", null: false
+    t.index ["entity_id"], name: "index_categorizations_on_entity_id"
+    t.index ["group_id"], name: "index_categorizations_on_group_id"
   end
 
   create_table "entities", force: :cascade do |t|
@@ -33,10 +33,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_161211) do
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "icon"
-    t.bigint "author_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_groups_on_author_id"
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,8 +45,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_161211) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "catogorization", "entities"
-  add_foreign_key "catogorization", "groups"
+  add_foreign_key "categorizations", "entities"
+  add_foreign_key "categorizations", "groups"
   add_foreign_key "entities", "users", column: "author_id"
-  add_foreign_key "groups", "users", column: "author_id"
+  add_foreign_key "groups", "users"
 end
