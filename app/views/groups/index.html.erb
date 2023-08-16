@@ -1,5 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
+<%if current_user != nil%>
 <h1>Groups</h1>
 
 <div id="groups">
@@ -12,3 +13,6 @@
 </div>
 
 <%= link_to "New group", new_group_path %>
+<%else%>
+<p> you need to sign in </p>
+<%end%>

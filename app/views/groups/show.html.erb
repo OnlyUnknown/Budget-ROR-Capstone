@@ -8,3 +8,9 @@
 
   <%= button_to "Destroy this group", @group, method: :delete %>
 </div>
+
+<%@transaction.each do |t|%>
+<p>
+<%= t.entity.amount %>
+</p>
+<%end%>

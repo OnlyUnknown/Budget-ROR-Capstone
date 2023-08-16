@@ -1,3 +1,4 @@
+<%if current_user != nil%>
 <h1>New entity</h1>
 
 <%= render "form", entity: @entity %>
@@ -7,3 +8,6 @@
 <div>
   <%= link_to "Back to entities", entities_path %>
 </div>
+<%else%>
+<p> error!, sign in first</p>
+<%end%>

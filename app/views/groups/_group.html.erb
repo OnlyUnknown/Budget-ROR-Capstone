@@ -10,8 +10,9 @@
   </p>
 
   <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
+    <strong>updated:</strong>
+    <% updated= group.updated_at.to_s %>
+    <%= updated[0,10] %>
   </p>
 
 </div>

@@ -1,3 +1,4 @@
+<%if current_user != nil%>
 <p style="color: green"><%= notice %></p>
 
 <h1>Entities</h1>
@@ -12,3 +13,6 @@
 </div>
 
 <%= link_to "New entity", new_entity_path %>
+<%else%>
+<p> error!, sign in first</p>
+<%end%>

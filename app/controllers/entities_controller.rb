@@ -24,7 +24,7 @@ class EntitiesController < ApplicationController
     @entity = Entity.new(entity_params)
 
     respond_to do |format|
-      if @entity.save
+      if @entity.save 
         format.html { redirect_to entity_url(@entity), notice: "Entity was successfully created." }
         format.json { render :show, status: :created, location: @entity }
       else
@@ -65,6 +65,8 @@ class EntitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def entity_params
-      params.require(:entity).permit(:name, :amount, :user_id)
+      params.require(:entity).permit(:name, :amount, :author_id, group_ids: [])
     end
+
+
 end
