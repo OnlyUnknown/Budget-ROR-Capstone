@@ -1,4 +1,4 @@
-<%if current_user != nil%>
+
 <h1>New group</h1>
 
 <%= render "form", group: @group %>
@@ -9,6 +9,3 @@
   <%= link_to "Back to groups", groups_path %>
 </div>
 
-<%else%>
-<p> error!, sign in first</p>
-<%end%>
