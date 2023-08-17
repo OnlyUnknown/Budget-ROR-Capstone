@@ -2,10 +2,16 @@
 
 <%= render @group %>
 
+<% @transaciton = Category.where(group_id:params[:id]).order(updated_at: :desc)%>
+
+<% @transaciton.each do |t|%>
+  <p>
+  amount:$<%=t.entity.amount %>
+  </p>
+  <%end%>
 <div>
   <%= link_to "Edit this group", edit_group_path(@group) %> |
   <%= link_to "Back to groups", groups_path %>
 
   <%= button_to "Destroy this group", @group, method: :delete %>
 </div>
-<%end%>

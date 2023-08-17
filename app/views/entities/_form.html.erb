@@ -24,10 +24,10 @@
   <%= form.hidden_field :author_id, value: current_user.id %>
 
   <div>
-    <% Group.all.each do |group| %>
-      <%= check_box_tag "entity[group_ids][]", group.id, @entity.groups.include?(group) %>
-      <%=h group.name %><br />
-    <% end %>
+  <% Group.all.each do |group| %>
+    <%= check_box_tag "entity[group_ids][]", group.id, @entity.groups.include?(group) %>
+    <%=h group.name %><br />
+  <% end %>
   </div>
 
   <div>

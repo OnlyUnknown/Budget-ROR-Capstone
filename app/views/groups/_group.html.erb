@@ -7,12 +7,23 @@
   <p>
     <strong>Icon:</strong>
     <%= group.icon %>
+    <%= image_tag("#{group.icon}.png", width: 50) %>
   </p>
+  <% @final = 0 %>
+  <% @total = Category.where(group_id: group.id) %>
+  <% @total.each do |category| %>
+    <% @final += category.entity.amount %>
+  <% end %>
 
+  <p>
+    <strong>Total Amount:</strong>
+    $<%= @final %>
+  </p>
   <p>
     <strong>updated:</strong>
     <% updated= group.updated_at.to_s %>
     <%= updated[0,10] %>
+
   </p>
 
 </div>

@@ -3,7 +3,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.all
+    @entities = Entity.all.order(updated_at: :desc)
   end
 
   # GET /entities/1 or /entities/1.json
