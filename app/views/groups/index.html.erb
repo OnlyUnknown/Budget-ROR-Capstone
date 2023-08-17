@@ -5,14 +5,16 @@
 
 <div id="groups">
   <% @groups.each do |group| %>
+    <%= link_to group do %>
     <%= render group %>
     <p>
-      <%= link_to "Show this group", group %>
+      
     </p>
+  <%end%>
   <% end %>
 </div>
-
-<%= link_to "New group", new_group_path %>
+<%= link_to "New entity", new_entity_path %>
+<%= link_to "Add new category", new_group_path %>
 <%else%>
 <p> you need to sign in </p>
 <%end%>

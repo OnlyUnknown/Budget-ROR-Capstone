@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @icon = [{name:"Mac", slug:"mac"},{name:"Samsung", slug:"samsung"},{name:"Asus", slug:"asus"},
-    {name:"Linkedin", slug:"linkedin"},{name:"Amazon", slug:"amazon"},{name:"Microsoft", slug:"microsoft"},
+    {name:"Amazon", slug:"amazon"},{name:"Microsoft", slug:"microsoft"},
     {name:"AliExpress", slug:"aliexpress"},{name:"Tesla", slug:"tesla"}, {name:"HP", slug:"hp"}, {name:"Sony", slug:"sony"}]
   end
 

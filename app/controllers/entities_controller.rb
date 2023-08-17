@@ -3,7 +3,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.all
+    @entities = Entity.all.order(updated_at: :desc)
   end
 
   # GET /entities/1 or /entities/1.json
@@ -25,7 +25,7 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if @entity.save 
-        format.html { redirect_to entity_url(@entity), notice: "Entity was successfully created." }
+        format.html { redirect_to groups_path, notice: "Entity was successfully created." }
         format.json { render :show, status: :created, location: @entity }
       else
         format.html { render :new, status: :unprocessable_entity }
