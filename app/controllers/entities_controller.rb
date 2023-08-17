@@ -3,7 +3,11 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.all.order(updated_at: :desc)
+    if current_user?
+    @entities = Entity.where(user_id: current_user.id).order(updated_at: :desc)
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /entities/1 or /entities/1.json

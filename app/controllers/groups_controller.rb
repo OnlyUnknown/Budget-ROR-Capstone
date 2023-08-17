@@ -3,11 +3,21 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    if current_user == nil
+      redirect_to new_user_session_path
+    else
+    @groups = Group.where(user_id: current_user.id)
+    end
   end
 
   # GET /groups/1 or /groups/1.json
   def show
+    @gro = Group.find_by(id: params[:id])
+    if current_user == nil
+    redirect_to new_user_session_path
+    elsif current_user.id != @gro.user_id
+      redirect_to root_path
+    end
   end
 
   # GET /groups/new
