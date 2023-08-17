@@ -1,0 +1,18 @@
+<div id="<%= dom_id group %>">
+  <p>
+    <strong>Name:</strong>
+    <%= group.name %>
+  </p>
+
+  <p>
+    <strong>Icon:</strong>
+    <%= group.icon %>
+  </p>
+
+  <p>
+    <strong>updated:</strong>
+    <% updated= group.updated_at.to_s %>
+    <%= updated[0,10] %>
+  </p>
+
+</div>
