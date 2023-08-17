@@ -1,45 +1,47 @@
-require "test_helper"
+require 'test_helper'
 
 class CategorizationsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @categorization = categorizations(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get categorizations_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_categorization_url
     assert_response :success
   end
 
-  test "should create categorization" do
-    assert_difference("Categorization.count") do
-      post categorizations_url, params: { categorization: { entity_id: @categorization.entity_id, group_id: @categorization.group_id } }
+  test 'should create categorization' do
+    assert_difference('Categorization.count') do
+      post categorizations_url,
+           params: { categorization: { entity_id: @categorization.entity_id, group_id: @categorization.group_id } }
     end
 
     assert_redirected_to categorization_url(Categorization.last)
   end
 
-  test "should show categorization" do
+  test 'should show categorization' do
     get categorization_url(@categorization)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_categorization_url(@categorization)
     assert_response :success
   end
 
-  test "should update categorization" do
-    patch categorization_url(@categorization), params: { categorization: { entity_id: @categorization.entity_id, group_id: @categorization.group_id } }
+  test 'should update categorization' do
+    patch categorization_url(@categorization),
+          params: { categorization: { entity_id: @categorization.entity_id, group_id: @categorization.group_id } }
     assert_redirected_to categorization_url(@categorization)
   end
 
-  test "should destroy categorization" do
-    assert_difference("Categorization.count", -1) do
+  test 'should destroy categorization' do
+    assert_difference('Categorization.count', -1) do
       delete categorization_url(@categorization)
     end
 
