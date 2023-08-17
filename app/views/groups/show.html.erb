@@ -6,7 +6,12 @@
 
 <% @transaciton.each do |t|%>
   <p>
-  amount:$<%=t.entity.amount %>
+  product:<%= t.entity.name%></br>
+  amount:$<%=t.entity.amount %></br>
+  <% updated= t.updated_at.to_s %>
+  time:<%= updated[10,8]%></br>
+  date:<%= updated[0,10] %>
+  
   </p>
   <%end%>
 <div>
