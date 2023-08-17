@@ -20,7 +20,7 @@
   <%if current_page?(groups_path) or current_page?(root_path)%>
   <p>
     <strong>updated:</strong>
-    <% updated= group.updated_at.to_s %>
+    <% updated= group.created_at.to_s %>
     <%= updated[0,10] %>
   </p>
   <%end%>
