@@ -61,7 +61,6 @@ For more information on the importance of a professional README for your reposit
 
 # 📖 [Spendy app] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
 **[Spendy]** is an app that is able to save you data so you can see how much you have spend
 and you can add groups to see you budget
@@ -95,7 +94,7 @@ and you can add groups to see you budget
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+
 
 - **[able to save your budget]**
 - **[able to see how much you've spent]**
@@ -107,10 +106,9 @@ and you can add groups to see you budget
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
-- [Live Demo Link]([https://google.com](https://spendy-app.onrender.com])
-- [Live Video Link]([https://www.loom.com/share/265e72d3e9a94decb804afd9dbfee4d2])
+- [Live Demo Link](https://spendy-app.onrender.com/splash)
+- [Live Video Link](https://www.loom.com/share/265e72d3e9a94decb804afd9dbfee4d2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
