@@ -1,6 +1,12 @@
-<h2>Sign up</h2>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="headerc">
+  <%=link_to image_tag("back.jpg",:width => 40, :border => 0, :alt => '', :title => ''), splash_path, :class => 'backa'%>
+
+<h2 class="header">REGISTER</h2>
+<%= f.submit "Next", class:"register" %>
+</div>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -27,7 +33,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    
   </div>
 <% end %>
 

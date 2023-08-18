@@ -30,6 +30,10 @@
 	font-style: normal;
 }
 
+body{
+    margin: 0px;
+}
+
  .button-container {
     display: flex;
     flex-direction: column;
@@ -65,3 +69,36 @@
     height: 100vh; /* Make the container take up the full viewport height */
     font-size: 40px;
   }
+
+.headerc{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    width: 100%;
+    background-color: #3778c2;
+    margin-top: -20px;
+}
+
+.header{
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+
+.backa{
+    margin-top:auto;
+    margin-bottom: auto;
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}
+
+.register{
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    border: none;
+    font-size: large;
+    color: white;
+    background-color: transparent;
+    font-weight: lighter;
+}
