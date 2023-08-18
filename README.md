@@ -116,7 +116,6 @@ and you can add groups to see you budget
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -136,14 +135,14 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
+
 Example commands:
 
 ```sh
   cd my-folder
   git clone git@github.com:myaccount/my-project.git
 ```
---->
+
 
 ### Install
 
@@ -207,18 +206,16 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES 
+FUTURE FEATURES 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Making more pages]**
+- [ ] **[Add new icons]**
+- [ ] **[availability to add profile pic]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -235,7 +232,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project I would like you to tell me what are the highlits
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,7 +242,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank Gregoire Vella on Behance for his design so that his design that I've folowwed
+I would like to thank Gregoire Vella on Behance for his design so that his design that I've followed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
