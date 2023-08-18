@@ -1,14 +1,20 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Users</h1>
-
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
+<div class='spendyc'
+<h1 class="spendy">𝓢𝓹𝓮𝓷𝓭𝔂</h1>
+</div>
+<div class="button-container">
+  <%= link_to new_user_session_path, class: "log" do  %>
+    <button class="log">
+      LOG IN
+    </button>
+  <% end %>
+  
+  <%= link_to new_user_registration_path, class: "sign" do %>
+    <button class="sign">
+      SIGN UP
+    </button>
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+
+
