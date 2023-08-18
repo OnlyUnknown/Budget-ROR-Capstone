@@ -3,4 +3,14 @@ class Entity < ApplicationRecord
   has_many :categories
   has_many :groups, through: :categories
   validates :name, presence: true
+
+  validate :categories_presence
+
+  private
+
+  def categories_presence
+    if categories.empty?
+      errors.add(:base, "At least one category must be selected")
+    end
+  end
 end
