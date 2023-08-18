@@ -3,7 +3,7 @@
 <%=link_to image_tag("back.jpg",:width => 35, :border => 0, :alt => '', :title => ''), root_path, :class => 'backa'%>
 
 <h2 class="header">NEW CATEGORY</h2>
-<%= form.submit "Create", class:"register" %>
+<%= form.submit "Save", class:"register" %>
 </div>
   <% if group.errors.any? %>
     <div style="color: red">
@@ -22,8 +22,7 @@
   </div>
 
   <div>
-    <%= form.label "Choose the icon", style: "display: block", class:'center' %>
-    <%= form.select :icon, @icon.map { |t| [t[:name], t[:slug]] }, {}, class: "rfield" %>
+    <%= form.select :icon, @icon.map { |t| [t[:name], t[:slug]] }, {:include_blank => 'Chose the icon'}, class: "rfield" %>
   </div>
 
   <div>

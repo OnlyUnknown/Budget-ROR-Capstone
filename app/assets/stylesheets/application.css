@@ -122,6 +122,7 @@ body{
 .center{
     font-family: 'Proxima Nova Condensed', sans-serif;
     text-align: center;
+    font-size: larger;
 }
 
 .forgot{
@@ -179,6 +180,8 @@ a{
 
 .categorya{ 
     display: flex;
+    position: fixed;
+    bottom: 0;
     margin-right: auto;
     margin-left: auto;
     margin-top: auto;
@@ -219,4 +222,46 @@ a{
 
 select{
     font-size: large;
+}
+
+.entityc{
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    border: solid rgba(212, 211, 212, 0.641) 3px;
+    padding-bottom: 5px;
+}
+
+.enc1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.enc1 p{
+    margin-bottom: -5px;
+}
+
+.enc2{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chose_c{
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    margin-top: 20px;
+    background-color: #434b54a0;
+    padding: 21px;
+    color: white;
 }
