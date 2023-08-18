@@ -28,12 +28,8 @@ After you're finished please remove all the comments and instructions!
 For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
 -->
 
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Spendy app</b></h3>
 
 </div>
 
@@ -63,18 +59,17 @@ For more information on the importance of a professional README for your reposit
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Spendy app] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Spendy]** is an app that is able to save you data so you can see how much you have spend
+and you can add groups to see you budget
 
 ## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
+- Ruby on rails
+- HTML and CSS
+- 
 <details>
   <summary>Client</summary>
   <ul>
@@ -102,9 +97,9 @@ For more information on the importance of a professional README for your reposit
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[able to save your budget]**
+- **[able to see how much you've spent]**
+- **[able to add them by groups]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +109,8 @@ For more information on the importance of a professional README for your reposit
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link]([https://google.com](https://spendy-app.onrender.com])
+- [Live Video Link]([https://www.loom.com/share/265e72d3e9a94decb804afd9dbfee4d2])
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,13 +126,13 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
+
 Example command:
 
 ```sh
  gem install rails
 ```
- -->
+
 
 ### Setup
 
@@ -155,44 +151,43 @@ Example commands:
 
 Install this project with:
 
-<!--
+
 Example command:
 
 ```sh
-  cd my-project
   gem install
 ```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
+
 Example command:
 
 ```sh
   rails server
 ```
---->
+
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  bundle exec rspec spec/controllers
 ```
---->
 
+<!--
 ### Deployment
 
 You can deploy this project using:
 
-<!--
+
 Example:
 
 ```sh
@@ -208,21 +203,13 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Abdullah AL-Khureif**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/OnlyUnknown)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+<!-- FUTURE FEATURES 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -233,7 +220,7 @@ Example:
 - [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -260,11 +247,11 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank Gregoire Vella on Behance for his design so that his design that I've folowwed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
+<!-- FAQ (optional) 
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
@@ -279,7 +266,7 @@ I would like to thank...
   - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+-->
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
