@@ -1,5 +1,4 @@
 
-<p style="color: green"><%= notice %></p>
 
 <div class="headerc">
 <%=link_to image_tag("back.jpg",:width => 35, :border => 0, :alt => '', :title => ''), splash_path, :class => 'backa'%>
@@ -7,7 +6,8 @@
 <h2 class="header">TRANSACTIONS</h2>
 <%=link_to image_tag("search.png",:width => 35, :border => 0, :alt => '', :title => ''), root_path, :class => 'backa search'%>
 </div>
-<div class="mostrecent"> Most Recent <br>. </div>
+<div class="mostrecent"> Most Recent <br> . </div>
+<p style="color: green"><%= notice %></p>
 <div id="groups">
   <% @groups.each do |group| %>
     <%= link_to group do %>
