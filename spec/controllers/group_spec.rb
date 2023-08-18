@@ -10,8 +10,8 @@ RSpec.describe GroupsController, type: :controller do
     end
 
     context 'when user is signed in' do
-      let(:user) { User.create(name: "Tome", email: "email@gmail.com", password: "123123") }
-      let(:group) { Group.create(name: "group", icon: "amazon", user: user) }
+      let(:user) { User.create(name: 'Tome', email: 'email@gmail.com', password: '123123') }
+      let(:group) { Group.create(name: 'group', icon: 'amazon', user:) }
 
       before { sign_in user }
 

@@ -11,9 +11,9 @@ RSpec.describe EntitiesController, type: :controller do
   describe 'POST #create' do
     context 'with invalid parameters' do
       it 'does not create a new Entity' do
-        expect {
+        expect do
           post :create, params: { entity: { name: nil, amount: 100 } }
-        }.not_to change(Entity, :count)
+        end.not_to change(Entity, :count)
       end
 
       it 'renders the new template with unprocessable entity' do
