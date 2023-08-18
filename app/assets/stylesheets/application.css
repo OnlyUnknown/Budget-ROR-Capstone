@@ -117,3 +117,17 @@ body{
     font-size: large;
     opacity:70%;
 }
+
+.center{
+    font-family: 'Proxima Nova Condensed', sans-serif;
+    text-align: center;
+}
+
+.forgot{
+    font-size: large;
+    opacity: 50%;
+}
+
+.search{
+    margin-right: 20px;
+}
