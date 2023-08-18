@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: budget_ror_capstone_production
   username: budget_ror_capstone
   password: <%= ENV["BUDGET_ROR_CAPSTONE_DATABASE_PASSWORD"] %>
