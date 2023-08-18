@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   get "/splash", to: 'users#index'
   resources :entities
   resources :groups
-  resources :categorizations
   # Defines the root path route ("/")
 end
