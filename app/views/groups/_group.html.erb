@@ -1,11 +1,5 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-
-    <%= image_tag("#{group.icon}.png", width: 50) %>
+<div id="<%= dom_id group %>" class="groupc">
+<%= image_tag("#{group.icon}.png", width: 60, class: "img") %>
 
   <% @final = 0 %>
   <% @total = Category.where(group_id: group.id) %>
@@ -13,16 +7,24 @@
     <% @final += category.entity.amount %>
   <% end %>
 
-  <p>
-    <strong>Total Amount:</strong>
-    $<%= @final %>
+  <div class ="textc">
+  <p class="gname">
+    <%= group.name %>
   </p>
   <%if current_page?(groups_path) or current_page?(root_path)%>
-  <p>
-    <strong>updated:</strong>
+  <p class="date">
     <% updated= group.created_at.to_s %>
     <%= updated[0,10] %>
   </p>
   <%end%>
+</div>
+    
+
+
+
+  <p class="total">
+    $<%= @final %>.00
+  </p>
+
 
 </div>

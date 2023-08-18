@@ -1,15 +1,272 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+  src:
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+    url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+  src:
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adelle_rgregular';
+  src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot');
+  src:
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.woff') format('woff'),
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf') format('truetype'),
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.log,
+.sign {
+  font-size: larger;
+  height: 50px;
+  width: 100%;
+  border: none;
+  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+  font-family: 'Proxima Nova Condensed', sans-serif;
+}
+
+.log {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  color: white;
+  background-color: #3778c2;
+}
+
+.spendyc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Make the container take up the full viewport height */
+  font-size: 40px;
+}
+
+.headerc {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  background-color: #3778c2;
+  margin-top: -10px;
+}
+
+.header {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  padding: 7px;
+}
+
+.backa {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 40px;
+  height: 40px;
+  filter: invert(100%);
+  padding-left: 12px;
+}
+
+.register {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  border: none;
+  font-size: large;
+  color: white;
+  background-color: transparent;
+  font-weight: lighter;
+  padding-right: 12px;
+}
+
+.rfield {
+  width: 88%;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  margin-left: 10px;
+}
+
+.rfield::placeholder {
+  padding: 20px;
+  font-size: large;
+  opacity: 70%;
+}
+
+.center {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  text-align: center;
+  font-size: larger;
+}
+
+.forgot {
+  font-size: large;
+  opacity: 50%;
+}
+
+.search {
+  margin-right: 20px;
+}
+
+.groupc {
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  text-decoration: none;
+  padding: 20px;
+  border-bottom: solid rgba(212, 211, 212, 0.641) 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.textc {
+  top: 7px;
+  margin-right: auto;
+  margin-left: 7px;
+  color: #434b54;
+}
+
+.img {
+  height: 60px;
+  margin-left: 10px;
+}
+
+.total {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-size: medium;
+  font-weight: 1000;
+  margin-right: 30px;
+  color: black;
+}
+
+.date {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-size: small;
+  opacity: 50%;
+}
+
+.gname {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-size: medium;
+}
+
+.categorya {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  width: 100%;
+  height: 100px;
+  background-color: #5fb523;
+  color: white;
+  font-family: 'Proxima Nova Condensed', sans-serif;
+}
+
+.categoryab {
+  border: white solid 3px;
+  transform: translateX(-0%);
+  width: 90%;
+  height: 70%;
+  background-color: #5fb523;
+  color: white;
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mostrecent {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  background-color: #3778c2;
+  text-align: center;
+  padding-bottom: 3px;
+  color: white;
+  font-family: 'Proxima Nova Condensed', sans-serif;
+}
+
+select {
+  font-size: large;
+}
+
+.entityc {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  border: solid rgba(212, 211, 212, 0.641) 3px;
+  padding-bottom: 5px;
+}
+
+.enc1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.enc1 p {
+  margin-bottom: -5px;
+}
+
+.enc2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chose_c {
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: larger;
+  margin-top: 20px;
+  background-color: #434b54a0;
+  padding: 21px;
+  color: white;
+}

@@ -1,8 +1,13 @@
 
+
+<div class="headerc">
+<%=link_to image_tag("back.jpg",:width => 35, :border => 0, :alt => '', :title => ''), splash_path, :class => 'backa'%>
+
+<h2 class="header">TRANSACTIONS</h2>
+<%=link_to image_tag("search.png",:width => 35, :border => 0, :alt => '', :title => ''), root_path, :class => 'backa search'%>
+</div>
+<div class="mostrecent"> Most Recent <br> . </div>
 <p style="color: green"><%= notice %></p>
-
-<h1>Groups</h1>
-
 <div id="groups">
   <% @groups.each do |group| %>
     <%= link_to group do %>
@@ -13,6 +18,8 @@
   <%end%>
   <% end %>
 </div>
-<%= link_to "New entity", new_entity_path %>
-<%= link_to "Add new category", new_group_path %>
+
+<%= link_to new_group_path, class:"categorya" do %>
+  <button class='categoryab'>Add Category</button>
+  <%end%>
 
