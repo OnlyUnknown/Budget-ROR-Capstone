@@ -6,7 +6,6 @@ class EntitiesController < ApplicationController
     @entity = Entity.new
   end
 
-
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
@@ -21,7 +20,6 @@ class EntitiesController < ApplicationController
       end
     end
   end
-
 
   private
 
