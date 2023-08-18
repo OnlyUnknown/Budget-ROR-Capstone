@@ -3,7 +3,7 @@ class Entity < ApplicationRecord
   has_many :categories
   has_many :groups, through: :categories
   validates :name, presence: true
-
+  validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validate :categories_presence
 
   private

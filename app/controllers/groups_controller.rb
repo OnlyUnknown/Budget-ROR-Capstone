@@ -6,13 +6,13 @@ class GroupsController < ApplicationController
     if current_user.nil?
       redirect_to new_user_session_path
     else
-      @groups = Group.where(user_id: current_user.id)
+      @groups = Group.includes(:user).where(user_id: current_user.id)
     end
   end
 
   # GET /groups/1 or /groups/1.json
   def show
-    @gro = Group.find_by(id: params[:id])
+    @gro = Group.includes(:user).find_by(id: params[:id])
     if current_user.nil?
       redirect_to new_user_session_path
     elsif current_user.id != @gro.user_id
