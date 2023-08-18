@@ -4,5 +4,4 @@ class Group < ApplicationRecord
   has_many :entities, through: :categories
   validates :name, presence: true
   validates :icon, presence: true
-
 end

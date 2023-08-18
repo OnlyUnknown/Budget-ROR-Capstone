@@ -9,8 +9,8 @@ class Entity < ApplicationRecord
   private
 
   def categories_presence
-    if categories.empty?
-      errors.add(:base, "At least one category must be selected")
-    end
+    return unless categories.empty?
+
+    errors.add(:base, 'At least one category must be selected')
   end
 end
