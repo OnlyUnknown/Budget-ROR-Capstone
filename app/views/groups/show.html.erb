@@ -1,0 +1,35 @@
+
+<div class="headerc">
+<%=link_to image_tag("back.jpg",:width => 35, :border => 0, :alt => '', :title => ''), root_path, :class => 'backa'%>
+
+<h2 class="header">TRANSACTIONS</h2>
+<%=link_to image_tag("search.png",:width => 35, :border => 0, :alt => '', :title => ''), root_path, :class => 'backa search'%>
+</div>
+<p style="color: green"><%= notice %></p>
+
+<%= render @group %>
+
+<% @transaciton = Category.where(group_id:params[:id]).order(updated_at: :desc)%>
+
+<% @transaciton.each do |t|%>
+  <div class="entityc">
+  <div class="enc1">
+  <p>product:<%= t.entity.name%></p>
+    <% updated= t.updated_at.to_s %>
+  <p class="date">
+  time:<%= updated[10,9]%>
+  </p>
+  <p class="date">
+  date:<%= updated[0,10] %>
+  </p>
+  </div>
+  <div class="enc2">
+  amount:$<%=t.entity.amount %>
+  </div>
+
+  </div>
+  <%end%>
+
+  <%= link_to new_entity_path, class:"categorya" do %>
+    <button class='categoryab'>Add Transaction</button>
+    <%end%>

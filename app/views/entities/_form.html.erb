@@ -1,0 +1,36 @@
+<%= form_with(model: @entity) do |form| %>
+  <div class="headerc">
+<%=link_to image_tag("back.jpg",:width => 35, :border => 0, :alt => '', :title => ''), root_path, :class => 'backa'%>
+
+<h2 class="header">ADD TRANSACTION</h2>
+<%= form.submit "Save", class:"register" %>
+</div>
+  <% if @entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+
+      <ul>
+        <% @entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name,  placeholder:"Product name", class:"rfield" %>
+  </div>
+
+  <div>
+    <%= form.number_field :amount,  placeholder:"Amount", class:"rfield" %>
+  </div>
+
+  <%= form.hidden_field :author_id, value: current_user.id %>
+<p class="center">Choose the group</p>
+  <div class="chose_c">
+  <% Group.where(user_id: current_user.id).each do |group| %>
+    <%= check_box_tag "entity[group_ids][]", group.id, @entity.groups.include?(group) %>
+    <%=h group.name %><br />
+  <% end %>
+  </div>
+<% end %>
