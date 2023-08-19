@@ -108,7 +108,7 @@ and you can add groups to see you budget
 
 
 - [Live Demo Link](https://spendy-app.onrender.com/splash)
-- [Live Video Link](https://www.loom.com/share/265e72d3e9a94decb804afd9dbfee4d2)
+- [Live Video Link](https://www.loom.com/share/253ec7c6a3fd495cbc324766ccbf7838)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
